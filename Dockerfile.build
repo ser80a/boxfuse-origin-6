@@ -1,0 +1,7 @@
+FROM maven:3.8.8-eclipse-temurin-8
+
+RUN apt-get update && \
+    apt-get install -y git openssh-client curl docker.io && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
